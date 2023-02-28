@@ -17,15 +17,15 @@
 #     url: https://github.com/portabilis/i-educar/releases/download/{{ ieducar__version }}/ieducar-{{ ieducar__version }}.tar.gz
 #     dest: /home/{{ ieducar__run_user }}/ieducar-{{ ieducar__version }}.tar.gz
 
-- name: Git Checkout i-Educar {{ ieducar__version }}
-  become: yes
-  become_user: root
-  git:
-    repo: "{{ ieducar__url_repository }}"
-    version: "{{ ieducar__version }}"
-    dest: "{{ ieducar__base_path }}"
-    clone: yes
-    update: yes
+# - name: Git Checkout i-Educar {{ ieducar__version }} || {{ ieducar__url_repository }} || {{ ieducar__base_path }}
+#   become: yes
+#   become_user: root
+#   git:
+#     repo: "https://github.com/portabilis/i-educar.git"
+#     version: "{{ ieducar__version }}"
+#     dest: "{{ ieducar__base_path }}"
+#     clone: yes
+#     update: yes
 
 # - name: "Extract package i-Educar {{ ieducar__version }}"
 #   #become: yes
